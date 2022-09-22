@@ -49,13 +49,27 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Platforms\Android\Resources\layout\tabbar.xml" />
+	  <None Remove="Resources\Images\tab-configuracoes.svg" />
+	  <None Remove="Resources\Images\tab_agenda.svg" />
+	  <None Remove="Resources\Images\tab_cronograma.svg" />
+	  <None Remove="Resources\Images\tab_patrocinadores.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Paginas\PaginaDePatrocinadores.xaml.cs">
+	    <DependentUpon>PaginaDePatrocinadores.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Paginas\PaginaDeAgenda.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Paginas\PaginaDeCronograma.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Paginas\PaginaDePatriocinadores.xaml">
+	  <MauiXaml Update="Paginas\PaginaDePatrocinadores.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
