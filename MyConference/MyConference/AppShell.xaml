@@ -3,12 +3,37 @@
     x:Class="MyConference.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MyConference"
+    xmlns:paginas="clr-namespace:MyConference.Paginas"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Cronograma">
+            <ShellContent
+                Title="Dia 1"
+                ContentTemplate="{DataTemplate paginas:PaginaDeCronograma}"
+                Route="CronogramaDia1" />
+            <ShellContent
+                Title="Dia 2"
+                ContentTemplate="{DataTemplate paginas:PaginaDeCronograma}"
+                Route="CronogramaDia2" />
+        </Tab>
+        <Tab Title="Minha Agenda">
+            <ShellContent
+                Title="Dia 1"
+                ContentTemplate="{DataTemplate paginas:PaginaDeAgenda}"
+                Route="MinhaAgendaDia1" />
+            <ShellContent
+                Title="Dia 2 "
+                ContentTemplate="{DataTemplate paginas:PaginaDeAgenda}"
+                Route="MinhaAgendaDia2" />
+        </Tab>
+        <Tab Title="Patrocinadores">
+            <ShellContent
+                Title="Patrocinadores"
+                ContentTemplate="{DataTemplate paginas:PaginaDePatrocinadores}"
+                Route="Patrocinadores" /> 
+        </Tab>
+    </TabBar>
+
 
 </Shell>
